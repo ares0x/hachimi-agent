@@ -129,8 +129,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       '@hookform/resolvers':
-        specifier: ^5.2.2
-        version: 5.5.3(@standard-schema/spec@1.1.0)(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(zod@3.25.76)
+        specifier: ^5.9.0
+        version: 5.9.0(@standard-schema/spec@1.1.0)(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(zod@3.25.76)
       '@radix-ui/react-accordion':
         specifier: ^1.2.12
         version: 1.2.20(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -989,18 +989,18 @@ packages:
   '@grammyjs/types@4.0.0':
     resolution: {integrity: sha512-Z8lDLTvOlo12e5Vnly/vQh3JC9ppaitS1dGZ3w068gNitOd/y8tTSiib+Xm38aBGbtYGmUZwOc6afYrLs2CSTg==}
 
-  '@hookform/resolvers@5.5.3':
-    resolution: {integrity: sha512-KQWhbd+sg5zyBYsrlx+GTBOiohRvEjCeZOKDYq84xM3LaixYLJn/B1cHG1WaBd6BaPXVR3GQkxiHTJKatfbKmQ==}
+  '@hookform/resolvers@5.9.0':
+    resolution: {integrity: sha512-8sNo1IklGaONrsKzXjwZJNsPbccAXLXGX//G+VFEcQOviMtbvR8/fM6HWyA0qrjgpOYauwoodda53CQIWOZ7Ag==}
     peerDependencies:
       '@sinclair/typebox': '>=0.25.24'
       '@standard-schema/spec': ^1.0.0
       '@typeschema/main': '>=0.13.7'
-      '@vinejs/vine': ^2.0.0 || ^3.0.0
+      '@vinejs/vine': ^2.0.0 || ^3.0.0 || ^4.0.0
       ajv: ^8.12.0
       ajv-errors: ^3.0.0
       ajv-formats: ^2.1.1
       arktype: ^2.0.0
-      ata-validator: ^0.7.0
+      ata-validator: ^1.2.0
       class-transformer: '>=0.4.0'
       class-validator: '>=0.12.0'
       computed-types: ^1.0.0
@@ -1008,13 +1008,13 @@ packages:
       fluentvalidation-ts: ^3.0.0
       fp-ts: ^2.7.0
       io-ts: ^2.0.0
-      joi: ^17.0.0
+      joi: ^17.0.0 || ^18.0.0
       nope-validator: '>=0.12.0'
       react-hook-form: ^7.55.0
       superstruct: '>=0.12.0'
       typanion: ^3.3.2
-      valibot: ^1.0.0 || ^1.0.0-beta.4 || ^1.0.0-rc
-      vest: '>=3.0.0'
+      valibot: '>=0.31.0 || ^1.0.0-beta.4 || ^1.0.0-rc'
+      vest: '>=6.0.0'
       yup: ^1.0.0
       zod: ^3.25.0 || ^4.0.0
     peerDependenciesMeta:
@@ -1091,11 +1091,12 @@ packages:
     resolution: {integrity: sha512-9I2Zn6+NJLfaGoz9jN3lpwDgAYvfGeNYdbAIjJOqzs4Tpc+VU3Jqq4IofSUBKajiDS8k9fZIg18/z13mpk1bsA==}
     engines: {node: '>=8'}
 
-  '@napi-rs/wasm-runtime@1.1.6':
-    resolution: {integrity: sha512-ZLv/JdUfkvOy9eCnnBaGfiO+XimbjebAeO+MRQqD/B+FR1tnRN0tpKSJHRbE8sFfS6aqsXZ67TQjfwfsxULVbg==}
+  '@napi-rs/wasm-runtime@1.2.3':
+    resolution: {integrity: sha512-UMduMbqO5s5zF2NkNacMT/yK5Y5QiKvWr2+50bzIIxFDwVJ2h49b+oyjaCGPhJxd2/gC2x39EHv/gHVuu36x2Q==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=23.5.0}
     peerDependencies:
-      '@emnapi/core': ^1.7.1
-      '@emnapi/runtime': ^1.7.1
+      '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.4
+      '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.4
 
   '@opentui/core-darwin-arm64@0.4.5':
     resolution: {integrity: sha512-8KUG0oRidnR+oW1RSZJ72/PhZLl+qRRMk5U/mieF4c0SJ5V3tYACpBZAKzQfHNd1f7QzD8FHZct1lPpQgtmkWg==}
@@ -2825,6 +2826,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@3.3.18:
+    resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
   node-addon-api@8.9.0:
     resolution: {integrity: sha512-ekZMeaaIzSQTSpr7X2X3iJM7lTzgnx8ahAG9pJfT/7+14mlEM8ZYQ9cgCDvSSRbReFK0oHli3WrZdCiRsgAT9Q==}
     engines: {node: ^18 || ^20 || >= 21}
@@ -2904,6 +2910,10 @@ packages:
 
   postcss@8.5.22:
     resolution: {integrity: sha512-KBDEIpLrvpv16pp3K0Fw+UCoZfopFjjgeB+0tA/aaThfEE74kKDLrgg603YvOWJyg3+WYtyq3xYsQWsIyZlPqQ==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.5.26:
+    resolution: {integrity: sha512-u82N74LFzG8ca+dD8puPnplTXoGH4fTPpVGuIbt36G3qvNlkvfD0lEAZSxaly3KX8TS/L1A1gsCEmvKmBcVbkQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   process-warning@4.0.1:
@@ -3846,7 +3856,7 @@ snapshots:
 
   '@grammyjs/types@4.0.0': {}
 
-  '@hookform/resolvers@5.5.3(@standard-schema/spec@1.1.0)(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(zod@3.25.76)':
+  '@hookform/resolvers@5.9.0(@standard-schema/spec@1.1.0)(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(zod@3.25.76)':
     dependencies:
       '@standard-schema/utils': 0.3.0
       react-hook-form: 7.83.0(react@19.2.8)
@@ -3878,7 +3888,7 @@ snapshots:
 
   '@lukeed/ms@2.0.2': {}
 
-  '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
+  '@napi-rs/wasm-runtime@1.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
@@ -4495,7 +4505,7 @@ snapshots:
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
-      '@napi-rs/wasm-runtime': 1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
+      '@napi-rs/wasm-runtime': 1.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
     optional: true
 
   '@rolldown/binding-win32-arm64-msvc@1.1.5':
@@ -5522,6 +5532,8 @@ snapshots:
 
   nanoid@3.3.16: {}
 
+  nanoid@3.3.18: {}
+
   node-addon-api@8.9.0: {}
 
   node-fetch@2.7.0:
@@ -5587,6 +5599,12 @@ snapshots:
   postcss@8.5.22:
     dependencies:
       nanoid: 3.3.16
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.26:
+    dependencies:
+      nanoid: 3.3.18
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -5931,7 +5949,7 @@ snapshots:
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
-      postcss: 8.5.22
+      postcss: 8.5.26
       rolldown: 1.1.5
       tinyglobby: 0.2.17
     optionalDependencies:
