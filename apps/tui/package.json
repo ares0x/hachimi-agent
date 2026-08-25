@@ -12,7 +12,7 @@
     "@hachimi/core": "workspace:*",
     "@hachimi/shared": "workspace:*",
     "@hachimi/storage": "workspace:*",
-    "@opentui/core": "^0.4.5"
+    "@opentui/core": "^0.5.6"
   },
   "devDependencies": {
     "tsx": "^4.19.0"
